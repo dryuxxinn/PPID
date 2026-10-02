@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-PPID - Layanan Informasi Publik</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#e30a17',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans antialiased text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Header (Navbar) - Tinggi h-20 (5rem) -->
+    <header class="bg-white fixed top-0 w-full z-50 flex justify-between items-center px-4 lg:px-8 h-20 border-b border-gray-200 shadow-sm">
+        
+        <!-- Left: Logo Container -->
+        <div class="flex items-center gap-3">
+            <img src="assets/TNI.webp" alt="Logo E-PPID" class="h-10 lg:h-12 w-auto object-contain" onerror="this.src='https://placehold.co/100x100/e30a17/ffffff?text=Logo'">
+            <div class="flex flex-col">
+                <span class="text-[#e30a17] font-bold text-base lg:text-lg leading-tight">E-PPID</span>
+                <span class="text-[#e30a17] text-xs lg:text-sm leading-tight">Layanan Informasi Publik</span>
+            </div>
+        </div>
+
+        <!-- Center: Navigation Links with FULL Dropdowns -->
+        <nav class="hidden lg:flex gap-6 xl:gap-8 text-sm font-semibold text-gray-500 items-center h-full">
+            <a href="#" class="text-[#e30a17] border-b-2 border-[#e30a17] h-full flex items-center relative top-[1px]">Beranda</a>
+            
+            <!-- Profil Dropdown -->
+            <div class="relative group h-full flex items-center">
+                <a href="#" class="flex items-center gap-1.5 hover:text-[#e30a17] transition-colors h-full cursor-pointer">
+                    Profil <i class="fas fa-chevron-down text-[10px]"></i>
+                </a>
+                <div class="absolute top-full left-0 hidden group-hover:block w-max min-w-[240px] bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Sejarah</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Profil Singkat</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Tugas & Fungsi</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Struktur Organisasi</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Visi & Misi</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Informasi Publik Dropdown -->
+            <div class="relative group h-full flex items-center">
+                <a href="#" class="flex items-center gap-1.5 hover:text-[#e30a17] transition-colors h-full cursor-pointer">
+                    Informasi Publik <i class="fas fa-chevron-down text-[10px]"></i>
+                </a>
+                <div class="absolute top-full left-0 hidden group-hover:block w-max min-w-[260px] bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Informasi Serta Merta</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Informasi Berkala</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Informasi Setiap Saat</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Layanan Informasi Dropdown -->
+            <div class="relative group h-full flex items-center">
+                <a href="#" class="flex items-center gap-1.5 hover:text-[#e30a17] transition-colors h-full cursor-pointer">
+                    Layanan Informasi <i class="fas fa-chevron-down text-[10px]"></i>
+                </a>
+                <div class="absolute top-full left-0 hidden group-hover:block w-max min-w-[280px] bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Registrasi Permohonan</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Permohonan Informasi</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Permohonan Keberatan</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Rekapitulasi Permohonan Informasi</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Laporan Informasi Publik</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Standar Layanan Dropdown -->
+            <div class="relative group h-full flex items-center">
+                <a href="#" class="flex items-center gap-1.5 hover:text-[#e30a17] transition-colors h-full cursor-pointer">
+                    Standar Layanan <i class="fas fa-chevron-down text-[10px]"></i>
+                </a>
+                <div class="absolute top-full left-0 hidden group-hover:block w-max min-w-[320px] bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Tata Cara Permohonan Informasi</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Alur Pelayanan Informasi Publik</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Mekanisme Keberatan</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Mekanisme Permohonan Penyelesaian Sengketa</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Waktu Pelayanan</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Standar Biaya Pelayanan</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Maklumat Pelayanan</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Regulasi Dropdown -->
+            <div class="relative group h-full flex items-center">
+                <a href="#" class="flex items-center gap-1.5 hover:text-[#e30a17] transition-colors h-full cursor-pointer">
+                    Regulasi <i class="fas fa-chevron-down text-[10px]"></i>
+                </a>
+                <div class="absolute top-full left-0 hidden group-hover:block w-max min-w-[300px] bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Peraturan KIP</span>
+                    </a>
+                    <a href="#" class="group/item flex items-center gap-3 px-4 py-2.5 mx-2 my-1 rounded-md text-sm text-gray-600 hover:bg-red-50 hover:text-[#e30a17] transition-colors">
+                        <i class="fa-regular fa-circle-right text-gray-400 group-hover/item:text-[#e30a17] transition-colors text-base"></i>
+                        <span class="font-medium">Peraturan KIP Yang Dikeluarkan Oleh TNI</span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="#" class="hover:text-[#e30a17] transition-colors h-full flex items-center">
+                Kontak
+            </a>
+        </nav>
+
+        <!-- Right: Login Button -->
+        <div class="flex items-center">
+            <button class="bg-[#e30a17] hover:bg-red-700 text-white rounded-md px-5 py-2.5 flex items-center justify-center gap-2 text-sm font-semibold transition-colors">
+                <i class="fa-regular fa-circle-user"></i>
+                Masuk
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-20"> <!-- pt-20 untuk memberi jarak dari navbar fixed -->
+        
+        <!-- Hero Section - Dibuat pas tinggi layar (100vh - tinggi navbar 5rem) -->
+        <section class="h-[calc(100vh-5rem)] min-h-[600px] relative flex items-center justify-center overflow-hidden">
+            
+            <!-- Background Image & Overlay -->
+            <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('assets/background.png');"></div>
+            <div class="absolute inset-0 z-0 bg-black/70"></div> 
+
+            <!-- Content Container -->
+            <div class="relative z-10 flex flex-col items-center justify-center h-full text-center w-full max-w-5xl mx-auto px-4 py-2">
+                
+                <!-- Main TNI Logo -->
+                <div class="mb-4">
+                    <img src="assets/TNI.webp" alt="Logo TNI" class="w-20 h-20 md:w-24 md:h-24 object-contain drop-shadow-2xl" onerror="this.src='https://placehold.co/96x96/transparent/ffffff?text=TNI'">
+                </div>
+
+                <!-- Text Content -->
+                <p class="text-gray-200 text-sm md:text-base mb-1 font-medium tracking-wide">Selamat Datang di</p>
+                <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide mb-1 drop-shadow-lg px-2 leading-tight">PORTAL PPID Tentara Nasional Indonesia</h1>
+                <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold tracking-wide mb-5 drop-shadow-lg leading-tight">Layanan Informasi Publik</h2>
+                <p class="text-gray-300 max-w-3xl text-sm md:text-base lg:text-lg mb-8 leading-relaxed drop-shadow-md px-2">
+                    Akses dokumen, data, dan layanan informasi publik Mabes TNI dengan mudah, cepat, dan sesuai dengan regulasi undang-undang yang berlaku.
+                </p>
+
+                <!-- 4 Category Boxes -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8 w-full max-w-4xl px-2">
+                    <!-- Box 1 -->
+                    <div class="flex flex-col items-center group cursor-pointer">
+                        <div class="w-20 h-20 sm:w-24 sm:h-24 bg-[#333333] rounded-[1.75rem] flex items-center justify-center mb-3 shadow-lg group-hover:bg-[#444444] transition-colors border border-gray-600/30"></div>
+                        <span class="text-white text-sm font-medium text-center">Informasi Berkala</span>
+                    </div>
+                    
+                    <!-- Box 2 -->
+                    <div class="flex flex-col items-center group cursor-pointer">
+                        <div class="w-20 h-20 sm:w-24 sm:h-24 bg-[#333333] rounded-[1.75rem] flex items-center justify-center mb-3 shadow-lg group-hover:bg-[#444444] transition-colors border border-gray-600/30"></div>
+                        <span class="text-white text-sm font-medium text-center">Informasi Serta Merta</span>
+                    </div>
+
+                    <!-- Box 3 -->
+                    <div class="flex flex-col items-center group cursor-pointer">
+                        <div class="w-20 h-20 sm:w-24 sm:h-24 bg-[#333333] rounded-[1.75rem] flex items-center justify-center mb-3 shadow-lg group-hover:bg-[#444444] transition-colors border border-gray-600/30"></div>
+                        <span class="text-white text-sm font-medium text-center leading-tight">Informasi Tersedia<br>Setiap Saat</span>
+                    </div>
+
+                    <!-- Box 4 -->
+                    <div class="flex flex-col items-center group cursor-pointer">
+                        <div class="w-20 h-20 sm:w-24 sm:h-24 bg-[#333333] rounded-[1.75rem] flex items-center justify-center mb-3 shadow-lg group-hover:bg-[#444444] transition-colors border border-gray-600/30"></div>
+                        <span class="text-white text-sm font-medium text-center leading-tight">Cari Informasi<br>Publik</span>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-row gap-4">
+                    <button class="bg-[#e30a17] hover:bg-red-700 text-white rounded-md px-6 py-2.5 flex items-center justify-center gap-2 text-sm font-semibold transition-colors shadow-lg">
+                        <i class="fa-regular fa-message"></i>
+                        Layanan Informasi
+                    </button>
+                    
+                    <button class="bg-gray-500/50 hover:bg-gray-500/70 backdrop-blur-md text-white rounded-md px-6 py-2.5 flex items-center justify-center gap-2 text-sm font-semibold transition-all shadow-lg border border-white/10">
+                        <i class="fas fa-headset"></i>
+                        Call Center
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer Section (Posisi ada di bawah, Anda bisa scroll ke bawah untuk melihatnya) -->
+        <footer class="w-full">
+            <div class="bg-[#3a3a3a] py-10">
+                <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col md:flex-row justify-between items-start gap-8 md:gap-4">
+                    
+                    <!-- Kiri -->
+                    <div class="flex flex-col">
+                        <img src="assets/TNI.webp" alt="Logo TNI" class="w-14 mb-3 object-contain" onerror="this.src='https://placehold.co/56x56/transparent/ffffff?text=TNI'">
+                        
+                        <div class="flex gap-2 mb-4">
+                            <img src="asset/logo-ad.png" alt="Logo AD" class="w-6 h-6 object-contain" onerror="this.src='https://placehold.co/24x24/transparent/ffffff?text=AD'">
+                            <img src="asset/logo-al.png" alt="Logo AL" class="w-6 h-6 object-contain" onerror="this.src='https://placehold.co/24x24/transparent/ffffff?text=AL'">
+                            <img src="asset/logo-au.png" alt="Logo AU" class="w-6 h-6 object-contain" onerror="this.src='https://placehold.co/24x24/transparent/ffffff?text=AU'">
+                        </div>
+                        
+                        <h2 class="text-white font-bold text-lg md:text-xl tracking-wide">E-PPID TENTARA NASIONAL INDONESIA</h2>
+                        <p class="text-gray-300 text-xs md:text-sm uppercase mt-1">LAYANAN INFORMASI PUBLIK</p>
+                    </div>
+
+                    <!-- Kanan -->
+                    <div class="flex flex-col gap-4 text-white text-sm md:text-base w-full md:w-auto">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-envelope mt-1 text-lg"></i>
+                            <p>permintaaninformasi@gmail.com</p>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-phone mt-1 text-lg"></i>
+                            <div>
+                                <p>Telp. +6221-8718444</p>
+                                <p>Ext. 6939</p>
+                                <p>Fax. 84591193</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt mt-1 text-lg"></i>
+                            <div>
+                                <p class="font-bold">Mabes TNI</p>
+                                <p>Jl. Parade Cilangkap Jakarta Timur 13870</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="bg-[#282828] py-4">
+                <p class="text-center text-gray-400 text-xs md:text-sm px-4">
+                    Hak Cipta &copy; PPID Tentara Nasional Indonesia
+                </p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
